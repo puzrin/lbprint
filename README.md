@@ -1,32 +1,60 @@
-lbprint
+lbprint <!-- omit in toc -->
 =======
 
 [![NPM version](https://img.shields.io/npm/v/lbprint.svg?style=flat)](https://www.npmjs.org/package/lbprint)
 
 > Label printing CLI tool for linux. Supported printers:
 >
-> - DYMO LabelManager PnP
+> - DYMO LabelManager PnP.
+> - Brother PT-P300BT.
+
+<img src="support/printers.jpg" width="60%">
+
+
+- [Install dependencies](#install-dependencies)
+  - [OS Packages (Ubuntu)](#os-packages-ubuntu)
+  - [USB printer](#usb-printer)
+  - [Bluetooth printer](#bluetooth-printer)
+- [Install package](#install-package)
+- [Use](#use)
+- [Examples](#examples)
 
 
 ## Install dependencies
 
-__Ubuntu__
+### OS Packages (Ubuntu)
 
-Viewer & `node_canvas` build packages:
+Viewer & `node_canvas` build dependencies:
 
-```
+```sh
 sudo apt-get install imagemagick build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 ```
 
+
+### USB printer
+
 Setup `udev` and `modeswitch` rules:
 
-```
+```sh
 # For DYMO LabelManager PnP
 curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/main/support/91-dymo-labelmanager-pnp.rules | sudo tee /etc/udev/rules.d/91-dymo-labelmanager-pnp.rules
 curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/main/support/dymo-labelmanager-pnp.conf | sudo tee /etc/usb_modeswitch.d/dymo-labelmanager-pnp.conf
 
 sudo systemctl restart udev.service
 ```
+
+
+### Bluetooth printer
+
+```sh
+sudo usermod -a -G dialout $USER
+# Get MAC address of PT-P300BT****
+hcitool scan
+# create /dev/rfcomm0 shortcut
+sudo rfcomm bind 0 <MAC_ADDRESS> 1
+```
+
+Re-login to update group pemissions.
 
 
 ## Install package
