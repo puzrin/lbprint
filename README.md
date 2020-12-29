@@ -48,13 +48,20 @@ sudo systemctl restart udev.service
 
 ```sh
 sudo usermod -a -G dialout $USER
-# Get MAC address of PT-P300BT****
-hcitool scan
-# create /dev/rfcomm0 shortcut
-sudo rfcomm bind 0 <MAC_ADDRESS> 1
+# !!! re-login to update group pemissions.
 ```
 
-Re-login to update group pemissions.
+Connect to printer (should be done every time before printer use):
+
+```sh
+# Get MAC address of PT-P300BT**** (remember it)
+hcitool scan
+# Connect to printer
+sudo rfcomm connect 0 <MAC_ADDRESS> 1 &
+```
+
+Known issue: PT-P300BT falls into error state several seconds after print. Push
+back button prior to next lbpint run.
 
 
 ## Install package
@@ -101,7 +108,7 @@ optional arguments:
                         default)
   -m <px>, --margin <px>
                         text horizontal margin (pixels, 30 by default)
-  -p {dymo_lm_pnp,view}, --printer {dymo_lm_pnp,view}
+  -p {dymo_lm_pnp,brother_ptp300bt,view}, --printer {dymo_lm_pnp,view}
                         printer to use (auto-detect by default)
   -t <mm>, --type-width <mm>
                         label type width (12 by default)
