@@ -37,8 +37,8 @@ Setup `udev` and `modeswitch` rules:
 
 ```sh
 # For DYMO LabelManager PnP
-curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/main/support/91-dymo-labelmanager-pnp.rules | sudo tee /etc/udev/rules.d/91-dymo-labelmanager-pnp.rules
-curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/main/support/dymo-labelmanager-pnp.conf | sudo tee /etc/usb_modeswitch.d/dymo-labelmanager-pnp.conf
+curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/master/support/91-dymo-labelmanager-pnp.rules | sudo tee /etc/udev/rules.d/91-dymo-labelmanager-pnp.rules
+curl -fsSL https://raw.githubusercontent.com/puzrin/lbprint/master/support/dymo-labelmanager-pnp.conf | sudo tee /etc/usb_modeswitch.d/dymo-labelmanager-pnp.conf
 
 sudo systemctl restart udev.service
 ```
