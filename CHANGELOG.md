@@ -1,3 +1,9 @@
+0.2.1 / 2021-09-01
+------------------
+
+- Pinned node-canvas version, to make lbprint work with node.js v14.
+
+
 0.2.0 / 2020-12-29
 ------------------
 

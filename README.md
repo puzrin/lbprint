@@ -66,7 +66,11 @@ back button prior to next lbpint run.
 
 ## Install package
 
-node.js v14+ required (for linux setup via [nvm](https://github.com/nvm-sh/nvm)).
+node.js v12 or v14 required (for linux setup via [nvm](https://github.com/nvm-sh/nvm)).
+
+**node.js v16 will not work due [problem](https://github.com/Automattic/node-canvas/issues/1737#issuecomment-842384640)
+with node-canvas package.**
+
 
 ```sh
 # global install
