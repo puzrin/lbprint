@@ -1,7 +1,8 @@
 WIP
 ------------------
 
-- Fixed compatibility with new nodejs (switched from `canvas` to `skr canvas`)
+- Fixed compatibility with new nodejs (switched from `canvas` to `skr canvas`).
+- Use default system image viewer for preview.
 
 
 0.2.1 / 2021-09-01

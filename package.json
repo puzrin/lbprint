@@ -23,6 +23,7 @@
     "debug": "^4.3.1",
     "glob": "^7.1.6",
     "make-error": "^1.3.6",
+    "open": "^8.4.1",
     "opentype.js": "^1.3.3",
     "packbits": "^1.0.1",
     "pngjs": "^6.0.0",

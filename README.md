@@ -12,7 +12,6 @@ lbprint <!-- omit in toc -->
 
 
 - [Install dependencies](#install-dependencies)
-  - [OS Packages (Ubuntu)](#os-packages-ubuntu)
   - [USB printer](#usb-printer)
   - [Bluetooth printer](#bluetooth-printer)
 - [Install package](#install-package)
@@ -21,15 +20,6 @@ lbprint <!-- omit in toc -->
 
 
 ## Install dependencies
-
-### OS Packages (Ubuntu)
-
-Viewer (optional):
-
-```sh
-sudo apt-get install imagemagick
-```
-
 
 ### USB printer
 
@@ -141,4 +131,14 @@ Print 3 lines with fixed size Helvetica font, and minimal line gap.
 
 ```sh
 lbprint -f helvR12.bdf -g0 foo bar baz
+```
+
+View only:
+
+```sh
+# use default viewer
+lbprint -p view 'foo bar'
+
+# specify custom viewer
+lbprint -p view --viewer display 'foo bar'
 ```
