@@ -17,9 +17,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.35",
     "argparse": "^2.0.1",
     "bdf-canvas": "^1.0.1",
-    "canvas": "~2.6.1",
     "debug": "^4.3.1",
     "glob": "^7.1.6",
     "make-error": "^1.3.6",

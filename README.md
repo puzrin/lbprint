@@ -24,10 +24,10 @@ lbprint <!-- omit in toc -->
 
 ### OS Packages (Ubuntu)
 
-Viewer & `node_canvas` build dependencies:
+Viewer (optional):
 
 ```sh
-sudo apt-get install imagemagick build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+sudo apt-get install imagemagick
 ```
 
 
@@ -66,22 +66,18 @@ back button prior to next lbpint run.
 
 ## Install package
 
-node.js v12 or v14 required (for linux setup via [nvm](https://github.com/nvm-sh/nvm)).
-
-**node.js v16 will not work due [problem](https://github.com/Automattic/node-canvas/issues/1737#issuecomment-842384640)
-with node-canvas package.**
+node.js v18+ required (for linux setup via [nvm](https://github.com/nvm-sh/nvm)).
 
 
 ```sh
+# run via npx
+npm lbprint -h
+
 # global install
 npm i lbprint -g
 
 lbprint -h
-```
 
-or
-
-```sh
 # local install from repo
 git clone https://github.com/puzrin/lbprint.git
 cd lbprint

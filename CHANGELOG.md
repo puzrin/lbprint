@@ -1,3 +1,9 @@
+WIP
+------------------
+
+- Fixed compatibility with new nodejs (switched from `canvas` to `skr canvas`)
+
+
 0.2.1 / 2021-09-01
 ------------------
 
