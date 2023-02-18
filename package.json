@@ -1,6 +1,6 @@
 {
   "name": "lbprint",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Label printing CLI tool",
   "keywords": [
     "dymo",
