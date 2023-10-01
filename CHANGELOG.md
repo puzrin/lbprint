@@ -1,4 +1,9 @@
-1.1.0 / 2023-09-01
+1.1.1 / 2023-10-01
+
+- Fixes for prev commit.
+
+
+1.1.0 / 2023-10-01
 
 - Added OSX support for Brother.
 - Fixed `fs.readSync()` use.
