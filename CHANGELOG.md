@@ -1,3 +1,9 @@
+1.1.0 / 2023-09-01
+
+- Added OSX support for Brother.
+- Fixed `fs.readSync()` use.
+
+
 1.0.0 / 2023-02-18
 ------------------
 
